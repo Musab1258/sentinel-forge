@@ -1,0 +1,16 @@
+{
+  "name": "sentinel-forge",
+  "private": true,
+  "packageManager": "pnpm@10.20.0",
+  "scripts": {
+    "dev": "PATH=\"$PWD/.bin:$PATH\" turbo dev",
+    "build": "PATH=\"$PWD/.bin:$PATH\" turbo build",
+    "lint": "PATH=\"$PWD/.bin:$PATH\" turbo lint",
+    "test": "PATH=\"$PWD/.bin:$PATH\" turbo test",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0",
+    "turbo": "^2.0.0"
+  }
+}
