@@ -50,16 +50,16 @@ export default function Home() {
       <section className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
         <div className="space-y-8">
           <div className="space-y-6">
-            <p className="eyebrow">Phase 1 foundation</p>
+            <p className="eyebrow">Phase 2 documentation layer</p>
             <h1 className="font-heading text-5xl font-semibold tracking-tight text-slate-50 sm:text-6xl">
               Advanced security and verification infrastructure for Soroban smart
               contracts.
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-slate-300">
               Sentinel Forge is being shaped as the research, analysis, and developer
-              workflow layer for secure Soroban development. The first release focuses on
-              a credible public surface, a real analyzer skeleton, and a clear path
-              toward detector-driven security automation.
+              workflow layer for secure Soroban development. The current milestone
+              focuses on a credible public surface, an analyzer skeleton, and
+              contributor-ready architecture and security documentation.
             </p>
           </div>
 

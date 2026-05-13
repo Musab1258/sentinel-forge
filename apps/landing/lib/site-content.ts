@@ -98,4 +98,3 @@ export const roadmap = [
     focus: "Visualization, fuzzing, symbolic execution, exploit replay, and ecosystem-facing security workflows.",
   },
 ];
-

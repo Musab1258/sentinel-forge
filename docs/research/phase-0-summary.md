@@ -1,12 +1,35 @@
 # Phase 0 Summary
 
-The Phase 0 research narrowed the initial value proposition to automated Soroban security infrastructure, with the first serious implementation target being a static analyzer that can reason about:
+Phase 0 narrowed Sentinel Forge from a broad security idea into a concrete initial implementation strategy.
 
-- authorization correctness
+## Main conclusions
+
+- Soroban needs stronger open security tooling than the ecosystem currently has
+- authorization correctness is likely the highest-value early detector category
+- static analysis is the most credible first engine because it can produce useful feedback before deeper execution systems are ready
+- long-term coverage will require both source-level and WASM-level reasoning
+
+## Initial detector focus
+
+- authorization flaws
 - unsafe storage access
-- invariant and validation failures
-- arithmetic and denial-of-service risks
-- future WASM-aware execution tracing
+- missing validation and invariant breaks
+- arithmetic risks
+- denial-of-service patterns
 
-This repository reflects that decision by prioritizing the landing page, the analyzer skeleton, and contributor-facing architecture notes.
+## Architectural implications
 
+The project should support analysis at several levels over time:
+
+- source and syntax tree
+- semantic and control-flow layers
+- WASM bytecode and execution traces
+- future symbolic and fuzz-driven exploration
+
+## Repository impact
+
+The current repository reflects those conclusions by prioritizing:
+
+- a serious landing page and project surface
+- a Rust workspace with the static analyzer as the first engine
+- architecture, security, and contributor docs that reduce future design drift
