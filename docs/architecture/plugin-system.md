@@ -36,6 +36,15 @@ Reporters consume structured findings and translate them for specific consumers:
 - deterministic tests
 - documented blind spots
 
-## Future interface shape
+## Current interface shape
 
-The current repository does not yet expose a formal trait-based plugin API beyond the documented direction. When phase 3 begins, detector and reporter traits should be introduced with the documentation in this file as the contract baseline.
+Phase 3 introduces a formal detector trait and registry in the static analyzer crate. The current implementation ships built-in detectors for:
+
+- missing authorization
+- unsafe storage access
+- missing validation
+- unchecked arithmetic
+- denial-of-service patterns
+- privilege escalation
+
+Reporter plugins are still represented through the shared finding model and output renderers rather than a separate crate-level plugin API.

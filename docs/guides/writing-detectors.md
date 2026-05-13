@@ -27,6 +27,8 @@ Document:
 
 - authorization correctness
 - storage access controls
+- privilege escalation
+- missing input validation
 - arithmetic safety
 - denial-of-service patterns
 

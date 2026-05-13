@@ -1,5 +1,11 @@
 fn main() {
-    println!("Sentinel Forge static analyzer bootstrap");
-    println!("priority detectors: authorization, storage, arithmetic, denial-of-service");
-}
+    let exit_code = match static_analyzer::cli::run() {
+        Ok(code) => code,
+        Err(error) => {
+            eprintln!("error: {error:#}");
+            2
+        }
+    };
 
+    std::process::exit(exit_code);
+}

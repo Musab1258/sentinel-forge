@@ -50,7 +50,7 @@ export default function Home() {
       <section className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
         <div className="space-y-8">
           <div className="space-y-6">
-            <p className="eyebrow">Phase 2 documentation layer</p>
+            <p className="eyebrow">Phase 3 static analysis MVP</p>
             <h1 className="font-heading text-5xl font-semibold tracking-tight text-slate-50 sm:text-6xl">
               Advanced security and verification infrastructure for Soroban smart
               contracts.
@@ -58,8 +58,8 @@ export default function Home() {
             <p className="max-w-2xl text-lg leading-8 text-slate-300">
               Sentinel Forge is being shaped as the research, analysis, and developer
               workflow layer for secure Soroban development. The current milestone
-              focuses on a credible public surface, an analyzer skeleton, and
-              contributor-ready architecture and security documentation.
+              focuses on a working static analyzer MVP with built-in detectors,
+              structured findings, and contributor-ready architecture.
             </p>
           </div>
 
@@ -95,7 +95,7 @@ export default function Home() {
                   Live scan posture
                 </p>
                 <p className="mt-2 font-heading text-2xl font-semibold text-slate-50">
-                  Analyzer bootstrap
+                  Analyzer MVP
                 </p>
               </div>
               <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs uppercase tracking-[0.24em] text-emerald-300">
@@ -117,8 +117,8 @@ export default function Home() {
                   First engine
                 </p>
                 <p className="mt-2 text-sm leading-6 text-slate-200">
-                  Static analyzer crate and CLI entrypoint initialized in the Rust
-                  workspace.
+                  Static analyzer crate, detector registry, and CLI scan flow are
+                  implemented in the Rust workspace.
                 </p>
               </article>
               <article className="rounded-3xl border border-white/10 bg-white/5 p-4">
@@ -126,8 +126,8 @@ export default function Home() {
                   Public surface
                 </p>
                 <p className="mt-2 text-sm leading-6 text-slate-200">
-                  Landing page mirrors the serious, institutional tone defined in the
-                  product notes.
+                  Docs, examples, and landing page copy now align with the live
+                  analyzer workflow and reporting outputs.
                 </p>
               </article>
             </div>

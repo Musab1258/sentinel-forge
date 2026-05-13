@@ -35,6 +35,7 @@ corepack pnpm build
 corepack pnpm --filter @sentinel-forge/landing dev
 corepack pnpm test
 cargo test
+cargo run -p static-analyzer --bin sentinel-forge -- scan examples/vulnerable-contracts
 ```
 
 See [docs/guides/local-development.md](docs/guides/local-development.md) for more detail.
@@ -64,6 +65,8 @@ The initial detector focus is:
 
 - authorization correctness
 - unsafe storage access
+- privilege escalation flows
+- missing input validation
 - arithmetic risk
 - denial-of-service patterns
 

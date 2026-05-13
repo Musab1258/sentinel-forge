@@ -7,7 +7,7 @@ export const navigation = [
 
 export const metrics = [
   { label: "Analysis modes planned", value: "06" },
-  { label: "Initial detector themes", value: "04" },
+  { label: "Built-in detectors", value: "06" },
   { label: "Execution surfaces", value: "AST + WASM" },
 ];
 
@@ -68,9 +68,9 @@ export const architecture = [
 ];
 
 export const cliSteps = [
-  "Scan a Soroban contract locally with the analyzer CLI.",
-  "Export structured findings as machine-readable JSON.",
-  "Promote the same output into CI and future dashboard views.",
+  "Scan a Soroban contract or fixture directory from the CLI.",
+  "Export the same findings as machine-readable JSON or SARIF.",
+  "Use CI mode to fail builds when the analyzer detects security issues.",
 ];
 
 export const researchTracks = [
@@ -91,7 +91,7 @@ export const roadmap = [
   },
   {
     phase: "Phase 3",
-    focus: "A credible static analyzer MVP with detector rules, evidence-rich reporting, and regression coverage.",
+    focus: "A credible static analyzer MVP with detector rules, text or JSON or SARIF reporting, and regression coverage.",
   },
   {
     phase: "Phase 4+",

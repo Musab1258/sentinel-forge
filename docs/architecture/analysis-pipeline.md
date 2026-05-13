@@ -56,4 +56,9 @@ All user-facing surfaces should consume a common result model rather than bespok
 
 ## Current implementation note
 
-The current codebase only includes a bootstrap analyzer crate. This pipeline is phase 2 architecture guidance for the phase 3 implementation work.
+The phase 3 MVP implements this pipeline in the static analyzer crate with:
+
+- Rust source ingest for files and directories
+- `syn`-based parsing and semantic extraction
+- an intermediate representation for detector execution
+- built-in text, JSON, and SARIF reporting

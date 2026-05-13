@@ -25,21 +25,21 @@ Sentinel Forge exists to close that gap with contributor-friendly, open infrastr
 The repository currently includes working project foundations and a documented architecture surface:
 
 - `apps/landing`: public-facing project site built with Next.js
-- `engines/static-analyzer`: initial Rust crate and CLI bootstrap
+- `engines/static-analyzer`: Rust-based Soroban analyzer with a real CLI, detector registry, and structured reporting
 - `engines/fuzzer`, `engines/symbolic-executor`, `engines/verification-engine`: staged engine crates
 - `docs/`: architecture, security, research, and contributor guides
 - `examples/`: space for vulnerable and secure contract fixtures
 
-The static analyzer binary is still a bootstrap entrypoint, not a full scanner yet. Phase 2 focuses on documenting the intended system clearly enough that contributors can extend it coherently.
+Phase 3 turns the static analyzer from a bootstrap binary into a usable MVP. The engine now parses Rust source with `syn`, builds a normalized IR, runs built-in detectors, and renders findings as text, JSON, or SARIF.
 
 ## Capability map
 
 | Capability | Status | Notes |
 | --- | --- | --- |
 | Landing page and project positioning | Active | Public explanation of modules, architecture, and roadmap |
-| Static analyzer crate | Bootstrap | Rust workspace member and CLI banner exist |
-| Detector architecture | Documented | Detector focus and plugin approach defined in docs |
-| Reporting architecture | Documented | JSON, SARIF, HTML, and dashboard paths defined |
+| Static analyzer crate | MVP | Parses Rust contracts, walks an IR, and exposes `scan` and `ci` commands |
+| Detector architecture | MVP | Built-in detector registry with authorization, storage, validation, arithmetic, DOS, and privilege rules |
+| Reporting architecture | MVP | Text, JSON, and SARIF output are implemented from one finding model |
 | Fuzzing | Planned | Architecture and contributor guidance drafted |
 | Symbolic execution | Planned | Path exploration design documented |
 | Formal verification | Planned | Verification engine reserved in workspace |
@@ -73,6 +73,8 @@ Current emphasis:
 
 - authorization flow analysis
 - state access and mutation checks
+- privilege escalation flows
+- missing input validation
 - arithmetic risk detection
 - denial-of-service pattern detection
 
@@ -99,10 +101,22 @@ Run the landing page:
 corepack pnpm --filter @sentinel-forge/landing dev
 ```
 
-Run the current analyzer bootstrap:
+Run the analyzer against a contract:
 
 ```bash
-cargo run -p static-analyzer --bin sentinel-forge
+cargo run -p static-analyzer --bin sentinel-forge -- scan examples/vulnerable-contracts/missing_authorization.rs
+```
+
+Export JSON:
+
+```bash
+cargo run -p static-analyzer --bin sentinel-forge -- scan examples/vulnerable-contracts/missing_authorization.rs --format json
+```
+
+Use CI mode:
+
+```bash
+cargo run -p static-analyzer --bin sentinel-forge -- ci examples/secure-contracts/guarded_admin.rs
 ```
 
 The workspace includes a local `pnpm` shim under `.bin/` so root Turborepo scripts still work when `pnpm` is not globally available.
@@ -141,6 +155,7 @@ Common commands:
 corepack pnpm build
 corepack pnpm test
 cargo test
+cargo run -p static-analyzer --bin sentinel-forge -- scan <path>
 ```
 
 See [docs/guides/local-development.md](docs/guides/local-development.md) for a fuller setup and workflow guide.
@@ -161,7 +176,7 @@ The project is organized in phases:
 - Phase 0: security research, scope definition, and MVP selection
 - Phase 1: branding, monorepo infrastructure, landing page, and engine scaffolding
 - Phase 2: documentation, architecture, threat modeling, and contributor guidance
-- Phase 3: credible static analyzer MVP
+- Phase 3: credible static analyzer MVP with built-in detectors and structured reporting
 
 See [ROADMAP.md](ROADMAP.md) for the full phase breakdown.
 
