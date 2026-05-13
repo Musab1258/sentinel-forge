@@ -50,7 +50,7 @@ export default function Home() {
       <section className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
         <div className="space-y-8">
           <div className="space-y-6">
-            <p className="eyebrow">Phase 3 static analysis MVP</p>
+            <p className="eyebrow">Phase 4 visualization and tooling</p>
             <h1 className="font-heading text-5xl font-semibold tracking-tight text-slate-50 sm:text-6xl">
               Advanced security and verification infrastructure for Soroban smart
               contracts.
@@ -58,8 +58,8 @@ export default function Home() {
             <p className="max-w-2xl text-lg leading-8 text-slate-300">
               Sentinel Forge is being shaped as the research, analysis, and developer
               workflow layer for secure Soroban development. The current milestone
-              focuses on a working static analyzer MVP with built-in detectors,
-              structured findings, and contributor-ready architecture.
+              extends the analyzer with dashboard triage, exploit visualization,
+              HTML reporting, and a VSCode workflow bridge.
             </p>
           </div>
 
@@ -95,20 +95,26 @@ export default function Home() {
                   Live scan posture
                 </p>
                 <p className="mt-2 font-heading text-2xl font-semibold text-slate-50">
-                  Analyzer MVP
+                  Visualization layer active
                 </p>
               </div>
               <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs uppercase tracking-[0.24em] text-emerald-300">
                 <span className="pulse-dot" />
-                active
+                phase 4
               </span>
             </div>
 
             <div className="rounded-3xl border border-white/10 bg-slate-950/75 p-4 font-mono text-sm text-slate-300 shadow-[0_24px_70px_rgba(0,0,0,0.3)]">
-              <p className="text-slate-500">$ sentinel-forge scan ./contracts/treasury.rs</p>
-              <p className="mt-3 text-rose-300">critical: authorization flow missing signer validation</p>
-              <p className="mt-1 text-amber-300">medium: storage guard absent on state transition</p>
-              <p className="mt-4 text-slate-400">report exported to ./reports/treasury.json</p>
+              <p className="text-slate-500">
+                $ sentinel-forge scan ./contracts/treasury.rs --format html --output ./reports/treasury.html
+              </p>
+              <p className="mt-3 text-rose-300">
+                critical: authorization flow missing signer validation
+              </p>
+              <p className="mt-1 text-amber-300">
+                medium: storage guard absent on state transition
+              </p>
+              <p className="mt-4 text-slate-400">report written to ./reports/treasury.html</p>
             </div>
 
             <div className="grid gap-3 sm:grid-cols-2">
@@ -117,8 +123,8 @@ export default function Home() {
                   First engine
                 </p>
                 <p className="mt-2 text-sm leading-6 text-slate-200">
-                  Static analyzer crate, detector registry, and CLI scan flow are
-                  implemented in the Rust workspace.
+                  Static analyzer, HTML reporting, and shared finding models now
+                  feed multiple visualization surfaces in the workspace.
                 </p>
               </article>
               <article className="rounded-3xl border border-white/10 bg-white/5 p-4">
@@ -126,8 +132,8 @@ export default function Home() {
                   Public surface
                 </p>
                 <p className="mt-2 text-sm leading-6 text-slate-200">
-                  Docs, examples, and landing page copy now align with the live
-                  analyzer workflow and reporting outputs.
+                  Dashboard, exploit-lab, and extension scaffolding now sit beside
+                  docs and examples to demonstrate the full developer workflow.
                 </p>
               </article>
             </div>
@@ -183,33 +189,33 @@ export default function Home() {
 
       <section id="tooling" className="section-shell mt-24 grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
         <div className="surface-panel p-6">
-          <p className="eyebrow">Exploit replay preview</p>
+          <p className="eyebrow">Visualization stack</p>
           <h2 className="mt-4 font-heading text-3xl font-semibold text-slate-50">
             The visual language stays technical, not theatrical.
           </h2>
           <p className="mt-4 text-sm leading-7 text-slate-300">
-            Instead of generic crypto marketing, the site previews the kind of evidence
-            Sentinel Forge is intended to produce: traces, severity context, and analysis
-            steps that a developer can act on.
+            Phase 4 turns the platform brief into usable tooling surfaces: the
+            dashboard for triage, the exploit lab for visual reasoning, and the
+            VSCode bridge for inline workflow adoption.
           </p>
 
           <div className="mt-8 grid gap-3">
             <div className="rounded-3xl border border-rose-500/20 bg-rose-500/8 p-4">
               <p className="font-mono text-xs uppercase tracking-[0.24em] text-rose-300">
-                attack trace
+                dashboard
               </p>
               <p className="mt-3 text-sm text-slate-200">
-                signer delegated call -&gt; privileged state mutation -&gt; missing
-                invariant guard -&gt; exploitable branch
+                severity charts, findings tables, code-linked evidence, and scan
+                history from the real analyzer report shape
               </p>
             </div>
             <div className="rounded-3xl border border-amber-500/20 bg-amber-500/8 p-4">
               <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber-300">
-                evidence bundle
+                exploit lab
               </p>
               <p className="mt-3 text-sm text-slate-200">
-                source locations, detector rationale, remediation hint, and export-ready
-                report metadata
+                attack-path graphs, replay timelines, and state transition maps
+                that explain exploit progression visually
               </p>
             </div>
           </div>
@@ -247,9 +253,9 @@ export default function Home() {
           <article className="surface-panel p-6">
             <p className="eyebrow">Open-source posture</p>
             <p className="mt-4 text-sm leading-7 text-slate-300">
-              The repo already includes contributing, security, research, and architecture
-              surfaces so the project reads like infrastructure in progress rather than a
-              loosely scoped concept.
+              The repo now includes the phase 4 interface layer as code, not just
+              roadmap promises: dashboard UI, exploit visualization, HTML export,
+              and IDE workflow scaffolding.
             </p>
           </article>
         </div>

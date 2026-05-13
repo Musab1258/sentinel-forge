@@ -23,6 +23,18 @@ Run the landing page:
 corepack pnpm --filter @sentinel-forge/landing dev
 ```
 
+Run the dashboard:
+
+```bash
+corepack pnpm --filter @sentinel-forge/dashboard dev
+```
+
+Run the exploit lab:
+
+```bash
+corepack pnpm --filter @sentinel-forge/exploit-lab dev
+```
+
 Run frontend tests:
 
 ```bash
@@ -39,6 +51,12 @@ Run the analyzer bootstrap binary:
 
 ```bash
 cargo run -p static-analyzer --bin sentinel-forge
+```
+
+Export an HTML report:
+
+```bash
+cargo run -p static-analyzer --bin sentinel-forge -- scan examples/vulnerable-contracts --format html --output reports/vulnerabilities.html
 ```
 
 ## Working rules

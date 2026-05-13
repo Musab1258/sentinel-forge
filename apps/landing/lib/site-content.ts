@@ -6,9 +6,9 @@ export const navigation = [
 ];
 
 export const metrics = [
-  { label: "Analysis modes planned", value: "06" },
-  { label: "Built-in detectors", value: "06" },
-  { label: "Execution surfaces", value: "AST + WASM" },
+  { label: "Report formats", value: "04" },
+  { label: "Frontend surfaces", value: "03" },
+  { label: "Workflow bridge", value: "CLI + IDE" },
 ];
 
 export const modules = [
@@ -69,15 +69,16 @@ export const architecture = [
 
 export const cliSteps = [
   "Scan a Soroban contract or fixture directory from the CLI.",
-  "Export the same findings as machine-readable JSON or SARIF.",
+  "Export the same findings as text, JSON, SARIF, or HTML.",
+  "Route the analyzer output into dashboard views, exploit replay, or editor diagnostics.",
   "Use CI mode to fail builds when the analyzer detects security issues.",
 ];
 
 export const researchTracks = [
-  "authorization correctness",
-  "state mutation safety",
-  "WASM-aware execution insight",
-  "formal reasoning readiness",
+  "dashboard triage",
+  "exploit replay",
+  "HTML reporting",
+  "VSCode diagnostics",
 ];
 
 export const roadmap = [
@@ -94,7 +95,7 @@ export const roadmap = [
     focus: "A credible static analyzer MVP with detector rules, text or JSON or SARIF reporting, and regression coverage.",
   },
   {
-    phase: "Phase 4+",
-    focus: "Visualization, fuzzing, symbolic execution, exploit replay, and ecosystem-facing security workflows.",
+    phase: "Phase 4",
+    focus: "Visualization and tooling: dashboard triage, exploit-lab storytelling, HTML reports, and IDE workflow scaffolding.",
   },
 ];

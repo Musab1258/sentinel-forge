@@ -1,0 +1,44 @@
+{
+  "name": "sentinel-forge-vscode",
+  "displayName": "Sentinel Forge",
+  "description": "Inline Soroban security diagnostics powered by the Sentinel Forge analyzer.",
+  "version": "0.1.0",
+  "private": true,
+  "publisher": "sentinel-forge",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": ["Programming Languages", "Linters"],
+  "activationEvents": [
+    "onCommand:sentinel-forge.scanCurrentFile",
+    "onLanguage:rust"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "sentinel-forge.scanCurrentFile",
+        "title": "Sentinel Forge: Scan Current File"
+      }
+    ],
+    "configuration": {
+      "title": "Sentinel Forge",
+      "properties": {
+        "sentinelForge.analyzerCommand": {
+          "type": "string",
+          "default": "cargo run -p static-analyzer --bin sentinel-forge -- scan",
+          "description": "Command used to invoke the Sentinel Forge analyzer."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "lint": "tsc --noEmit -p ."
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.0.0"
+  }
+}

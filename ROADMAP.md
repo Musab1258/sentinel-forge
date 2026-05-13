@@ -32,10 +32,10 @@ Static analyzer MVP:
 
 Visualization and tooling:
 
-- dashboard
-- exploit-lab prototype
-- JSON, SARIF, and HTML reporting
-- CI-friendly workflows
+- dashboard for findings, severity views, scan history, and code-linked traces
+- exploit-lab prototype for attack-path graphs, replay, and state transitions
+- JSON, SARIF, and HTML reporting from the analyzer
+- CI-friendly workflows and editor integration scaffolding
 
 ## Phase 5
 

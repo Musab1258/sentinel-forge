@@ -1,4 +1,3 @@
 # Shared
 
-Cross-cutting utilities and shared types for apps and engines will be promoted here as interfaces stabilize.
-
+Cross-workspace phase 4 data models, sample reports, and visualization fixtures used by the landing page, dashboard, exploit-lab, and extension scaffolding.

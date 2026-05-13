@@ -15,8 +15,97 @@ importers:
         specifier: ^2.0.0
         version: 2.9.12
 
+  apps/dashboard:
+    dependencies:
+      '@sentinel-forge/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+      next:
+        specifier: ^15.0.0
+        version: 15.5.18(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      react:
+        specifier: ^19.0.0
+        version: 19.2.6
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.2.6(react@19.2.6)
+    devDependencies:
+      '@eslint/eslintrc':
+        specifier: ^3.0.0
+        version: 3.3.5
+      '@tailwindcss/postcss':
+        specifier: ^4.0.0
+        version: 4.3.0
+      '@types/node':
+        specifier: ^24.0.0
+        version: 24.12.4
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.2.14
+      '@types/react-dom':
+        specifier: ^19.0.0
+        version: 19.2.3(@types/react@19.2.14)
+      eslint:
+        specifier: ^9.0.0
+        version: 9.39.4(jiti@2.7.0)
+      eslint-config-next:
+        specifier: ^15.0.0
+        version: 15.5.18(eslint@9.39.4(jiti@2.7.0))(typescript@5.9.3)
+      tailwindcss:
+        specifier: ^4.0.0
+        version: 4.3.0
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.3
+
+  apps/exploit-lab:
+    dependencies:
+      '@sentinel-forge/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+      next:
+        specifier: ^15.0.0
+        version: 15.5.18(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      react:
+        specifier: ^19.0.0
+        version: 19.2.6
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.2.6(react@19.2.6)
+    devDependencies:
+      '@eslint/eslintrc':
+        specifier: ^3.0.0
+        version: 3.3.5
+      '@tailwindcss/postcss':
+        specifier: ^4.0.0
+        version: 4.3.0
+      '@types/node':
+        specifier: ^24.0.0
+        version: 24.12.4
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.2.14
+      '@types/react-dom':
+        specifier: ^19.0.0
+        version: 19.2.3(@types/react@19.2.14)
+      eslint:
+        specifier: ^9.0.0
+        version: 9.39.4(jiti@2.7.0)
+      eslint-config-next:
+        specifier: ^15.0.0
+        version: 15.5.18(eslint@9.39.4(jiti@2.7.0))(typescript@5.9.3)
+      tailwindcss:
+        specifier: ^4.0.0
+        version: 4.3.0
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.3
+
   apps/landing:
     dependencies:
+      '@sentinel-forge/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
       next:
         specifier: ^15.0.0
         version: 15.5.18(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
@@ -57,6 +146,20 @@ importers:
       vitest:
         specifier: ^3.0.0
         version: 3.2.4(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)
+
+  extensions/vscode:
+    devDependencies:
+      '@types/node':
+        specifier: ^24.0.0
+        version: 24.12.4
+      '@types/vscode':
+        specifier: ^1.90.0
+        version: 1.118.0
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.3
+
+  packages/shared: {}
 
 packages:
 
@@ -796,6 +899,9 @@ packages:
 
   '@types/react@19.2.14':
     resolution: {integrity: sha512-ilcTH/UniCkMdtexkoCN0bI7pMcJDvmQFPvuPvmEaYA/NSfFTAgdUSLAoVjaRJm7+6PvcM+q1zYOwS4wTYMF9w==}
+
+  '@types/vscode@1.118.0':
+    resolution: {integrity: sha512-Ah6eTlqDcwIMELEVwQMO++rJAFBRz/oLluLD/vWdYrH1KuI9kfpaM+7pg0OvvascgcJy+ghLCERAYouM4QbzGw==}
 
   '@typescript-eslint/eslint-plugin@8.59.3':
     resolution: {integrity: sha512-PwFvSKsXGShKGW6n5bZOhGHEcCZXM8HofLK9fNsEwZXzFRjoY+XT1Vsf1zgyXdwTr0ZYz1/2tkZ0DBTT9jZjhw==}
@@ -2846,6 +2952,8 @@ snapshots:
   '@types/react@19.2.14':
     dependencies:
       csstype: 3.2.3
+
+  '@types/vscode@1.118.0': {}
 
   '@typescript-eslint/eslint-plugin@8.59.3(@typescript-eslint/parser@8.59.3(eslint@9.39.4(jiti@2.7.0))(typescript@5.9.3))(eslint@9.39.4(jiti@2.7.0))(typescript@5.9.3)':
     dependencies:

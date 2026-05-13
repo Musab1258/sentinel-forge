@@ -25,12 +25,15 @@ Sentinel Forge exists to close that gap with contributor-friendly, open infrastr
 The repository currently includes working project foundations and a documented architecture surface:
 
 - `apps/landing`: public-facing project site built with Next.js
+- `apps/dashboard`: phase 4 security dashboard for findings, scan history, and code-linked trace review
+- `apps/exploit-lab`: attack-path and replay-oriented exploit visualization prototype
 - `engines/static-analyzer`: Rust-based Soroban analyzer with a real CLI, detector registry, and structured reporting
 - `engines/fuzzer`, `engines/symbolic-executor`, `engines/verification-engine`: staged engine crates
+- `extensions/vscode`: inline diagnostics scaffold for editor-native workflow integration
 - `docs/`: architecture, security, research, and contributor guides
 - `examples/`: space for vulnerable and secure contract fixtures
 
-Phase 3 turns the static analyzer from a bootstrap binary into a usable MVP. The engine now parses Rust source with `syn`, builds a normalized IR, runs built-in detectors, and renders findings as text, JSON, or SARIF.
+Phase 4 turns that analyzer foundation into a visible tooling layer. The engine still parses Rust source with `syn`, builds a normalized IR, and runs built-in detectors, but it now also exports HTML reports and feeds shared finding models used by the dashboard, exploit-lab, and VSCode scaffold.
 
 ## Capability map
 
@@ -39,7 +42,10 @@ Phase 3 turns the static analyzer from a bootstrap binary into a usable MVP. The
 | Landing page and project positioning | Active | Public explanation of modules, architecture, and roadmap |
 | Static analyzer crate | MVP | Parses Rust contracts, walks an IR, and exposes `scan` and `ci` commands |
 | Detector architecture | MVP | Built-in detector registry with authorization, storage, validation, arithmetic, DOS, and privilege rules |
-| Reporting architecture | MVP | Text, JSON, and SARIF output are implemented from one finding model |
+| Reporting architecture | Phase 4 | Text, JSON, SARIF, and HTML output are implemented from one finding model |
+| Dashboard | Phase 4 | Findings table, severity views, scan history, and trace-linked code context |
+| Exploit visualization | Phase 4 | Attack path graph, replay timeline, and state transition prototype |
+| VSCode integration scaffold | Phase 4 | CLI-backed diagnostics and hover-based remediation hints |
 | Fuzzing | Planned | Architecture and contributor guidance drafted |
 | Symbolic execution | Planned | Path exploration design documented |
 | Formal verification | Planned | Verification engine reserved in workspace |
@@ -101,6 +107,18 @@ Run the landing page:
 corepack pnpm --filter @sentinel-forge/landing dev
 ```
 
+Run the dashboard:
+
+```bash
+corepack pnpm --filter @sentinel-forge/dashboard dev
+```
+
+Run the exploit lab:
+
+```bash
+corepack pnpm --filter @sentinel-forge/exploit-lab dev
+```
+
 Run the analyzer against a contract:
 
 ```bash
@@ -111,6 +129,12 @@ Export JSON:
 
 ```bash
 cargo run -p static-analyzer --bin sentinel-forge -- scan examples/vulnerable-contracts/missing_authorization.rs --format json
+```
+
+Export HTML:
+
+```bash
+cargo run -p static-analyzer --bin sentinel-forge -- scan examples/vulnerable-contracts --format html --output reports/vulnerabilities.html
 ```
 
 Use CI mode:
@@ -177,6 +201,7 @@ The project is organized in phases:
 - Phase 1: branding, monorepo infrastructure, landing page, and engine scaffolding
 - Phase 2: documentation, architecture, threat modeling, and contributor guidance
 - Phase 3: credible static analyzer MVP with built-in detectors and structured reporting
+- Phase 4: visualization and tooling with dashboard, exploit-lab, HTML reporting, and IDE scaffolding
 
 See [ROADMAP.md](ROADMAP.md) for the full phase breakdown.
 

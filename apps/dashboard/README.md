@@ -1,4 +1,3 @@
 # Dashboard
 
-Reserved for the operational interface that will visualize scan history, findings, trace data, and execution telemetry.
-
+Operational dashboard for Sentinel Forge findings, scan history, trace evidence, and code-linked remediation views.
