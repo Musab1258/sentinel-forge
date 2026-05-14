@@ -159,6 +159,12 @@ importers:
         specifier: ^5.0.0
         version: 5.9.3
 
+  packages/sdk:
+    dependencies:
+      '@sentinel-forge/shared':
+        specifier: workspace:*
+        version: link:../shared
+
   packages/shared: {}
 
 packages:
