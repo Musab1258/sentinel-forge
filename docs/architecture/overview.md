@@ -18,8 +18,9 @@ Sentinel Forge is a hybrid monorepo that separates public product surfaces, Rust
 | `apps/exploit-lab` | Future interactive attack replay and simulation surface |
 | `engines/static-analyzer` | First implementation lane and CLI bootstrap |
 | `engines/*` | Future fuzzing, symbolic execution, and verification systems |
+| `plugins/*` | Local registry surface for future detector and reporter extension manifests |
 | `packages/*` | Shared TypeScript config, UI primitives, SDK surfaces, and reusable types |
-| `docs/*` | Architecture, research, security, and contributor guidance |
+| `docs/*` | Architecture, research, security, contributor guidance, and application or intelligence assets |
 
 ## High-level system flow
 
@@ -44,7 +45,7 @@ Today, the codebase has:
 
 - a Next.js landing page that explains the system and roadmap
 - a Rust workspace with the static analyzer crate and placeholder engine crates
-- contributor, research, and security documentation
+- contributor, research, security, application, and vulnerability-intelligence documentation
 
 The static analyzer is intentionally the first engine because phase 0 research pointed to authorization, state mutation, arithmetic, and denial-of-service checks as the most useful early detector set for Soroban.
 

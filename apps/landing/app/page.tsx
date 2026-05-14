@@ -2,9 +2,11 @@ import {
   architecture,
   cliSteps,
   contributorLanes,
+  ecosystemFoundations,
   metrics,
   modules,
   navigation,
+  readinessTracks,
   researchTracks,
   roadmap,
 } from "../lib/site-content";
@@ -57,7 +59,7 @@ export default function Home() {
       <section className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
         <div className="space-y-8">
           <div className="space-y-6">
-            <p className="eyebrow">Phase 5 contributor readiness</p>
+            <p className="eyebrow">Phase 6 application readiness</p>
             <h1 className="font-heading text-5xl font-semibold tracking-tight text-slate-50 sm:text-6xl">
               Advanced security and verification infrastructure for Soroban
               smart contracts.
@@ -65,13 +67,17 @@ export default function Home() {
             <p className="max-w-2xl text-lg leading-8 text-slate-300">
               Sentinel Forge is being shaped as the research, analysis, and
               developer workflow layer for secure Soroban development. The
-              current milestone hardens the open-source contributor layer with
-              clearer issue structure, extension guides, benchmark fixtures, and
-              review expectations on top of the phase 4 tooling surface.
+              current milestone carries the project past contributor readiness
+              into maintainership-facing demos, CI scaffolding, vulnerability
+              intelligence, and local ecosystem contracts for future engines and
+              integrations.
             </p>
           </div>
 
           <div className="flex flex-wrap gap-4">
+            <a href="#readiness" className="primary-button">
+              Review readiness
+            </a>
             <a href="#architecture" className="primary-button">
               Review architecture
             </a>
@@ -103,12 +109,12 @@ export default function Home() {
                   Live scan posture
                 </p>
                 <p className="mt-2 font-heading text-2xl font-semibold text-slate-50">
-                  Contributor layer active
+                  Application layer active
                 </p>
               </div>
               <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs uppercase tracking-[0.24em] text-emerald-300">
                 <span className="pulse-dot" />
-                phase 5
+                phase 6
               </span>
             </div>
 
@@ -140,12 +146,12 @@ export default function Home() {
               </article>
               <article className="rounded-3xl border border-white/10 bg-white/5 p-4">
                 <p className="text-xs uppercase tracking-[0.24em] text-slate-400">
-                  Public surface
+                  Ecosystem surface
                 </p>
                 <p className="mt-2 text-sm leading-6 text-slate-200">
-                  Contributor guides, issue templates, and organized fixtures
-                  now sit beside the apps and engine crates to demonstrate a
-                  credible open-source workflow.
+                  Application prep docs, CI workflows, advisories, plugin
+                  manifests, and SDK contracts now sit beside the apps and
+                  engine crates to show a broader infrastructure posture.
                 </p>
               </article>
             </div>
@@ -293,8 +299,8 @@ export default function Home() {
       >
         <SectionHeading
           eyebrow="Contributor infrastructure"
-          title="Phase 5 reduces contributor friction without flattening the architecture."
-          description="The project now treats onboarding, fixture quality, and review structure as part of the product. That is how a security repository becomes maintainable instead of merely ambitious."
+          title="Contributor readiness now feeds maintainership and ecosystem growth."
+          description="Phase 5 remains the collaboration base, but it now supports phase 6 demos and later-phase expansion. The result is a repository that reads as operational infrastructure instead of isolated prototypes."
         />
 
         <div className="grid gap-4">
@@ -311,6 +317,55 @@ export default function Home() {
         </div>
       </section>
 
+      <section
+        id="readiness"
+        className="section-shell mt-24 grid gap-12 lg:grid-cols-[0.95fr_1.05fr]"
+      >
+        <SectionHeading
+          eyebrow="Readiness and scaling"
+          title="The repo now exposes what phases 6, 7, and 8 add locally."
+          description="The underlying implementation already includes the assets described in the later-phase brief. This section makes that visible from the public surface instead of leaving it buried in repository docs."
+        />
+
+        <div className="grid gap-4">
+          {readinessTracks.map((track) => (
+            <article key={track.phase} className="surface-panel p-6">
+              <p className="font-mono text-xs uppercase tracking-[0.24em] text-sky-300">
+                {track.phase}
+              </p>
+              <h3 className="mt-3 font-heading text-2xl font-semibold text-slate-50">
+                {track.title}
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-slate-300">
+                {track.summary}
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-shell mt-24 grid gap-6 lg:grid-cols-[0.82fr_1.18fr]">
+        <article className="surface-panel p-6">
+          <p className="eyebrow">Ecosystem foundations</p>
+          <h2 className="mt-4 font-heading text-3xl font-semibold text-slate-50">
+            Local building blocks for a broader Soroban security layer.
+          </h2>
+          <p className="mt-4 text-sm leading-7 text-slate-300">
+            Phase 8 is still a foundation, not a finished marketplace or hosted
+            platform. What exists locally now is the contract surface future
+            contributors can actually build on.
+          </p>
+        </article>
+
+        <div className="grid gap-4 md:grid-cols-2">
+          {ecosystemFoundations.map((item) => (
+            <article key={item} className="surface-panel p-5">
+              <p className="text-sm leading-7 text-slate-300">{item}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section id="roadmap" className="section-shell mt-24">
         <SectionHeading
           eyebrow="Execution path"
@@ -318,7 +373,7 @@ export default function Home() {
           description="The docs explicitly warn against trying to build every engine immediately. This setup follows that advice by giving the project a credible shell while leaving room for deeper implementation."
         />
 
-        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {roadmap.map((item) => (
             <article key={item.phase} className="surface-panel p-5">
               <p className="font-mono text-xs uppercase tracking-[0.24em] text-sky-300">
@@ -343,6 +398,9 @@ export default function Home() {
           </a>
           <a href="#architecture" className="transition hover:text-slate-50">
             Architecture
+          </a>
+          <a href="#readiness" className="transition hover:text-slate-50">
+            Readiness
           </a>
           <a href="#contribute" className="transition hover:text-slate-50">
             Contribute

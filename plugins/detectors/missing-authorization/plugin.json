@@ -1,0 +1,10 @@
+{
+  "id": "builtin.missing-authorization",
+  "name": "Missing Authorization Detector",
+  "kind": "detector",
+  "version": "0.1.0",
+  "description": "Detects privileged or state-changing logic that lacks a visible authorization gate.",
+  "entrypoint": "engines/static-analyzer/src/detectors/authorization.rs",
+  "capabilities": ["authorization", "privileged-state"],
+  "maturity": "mvp"
+}

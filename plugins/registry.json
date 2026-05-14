@@ -1,0 +1,12 @@
+[
+  {
+    "id": "builtin.missing-authorization",
+    "kind": "detector",
+    "manifest": "plugins/detectors/missing-authorization/plugin.json"
+  },
+  {
+    "id": "builtin.sarif-reporter",
+    "kind": "reporter",
+    "manifest": "plugins/reporters/sarif/plugin.json"
+  }
+]

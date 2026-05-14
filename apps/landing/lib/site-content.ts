@@ -2,6 +2,7 @@ export const navigation = [
   { label: "Modules", href: "#modules" },
   { label: "Architecture", href: "#architecture" },
   { label: "Tooling", href: "#tooling" },
+  { label: "Readiness", href: "#readiness" },
   { label: "Contribute", href: "#contribute" },
   { label: "Roadmap", href: "#roadmap" },
 ];
@@ -9,7 +10,7 @@ export const navigation = [
 export const metrics = [
   { label: "Report formats", value: "04" },
   { label: "Frontend surfaces", value: "03" },
-  { label: "Contributor rails", value: "Docs + templates" },
+  { label: "Later-phase rails", value: "CI + SDK + registry" },
 ];
 
 export const modules = [
@@ -80,6 +81,29 @@ export const researchTracks = [
   "reporting adapters",
   "benchmark fixtures",
   "VSCode diagnostics",
+  "vulnerability advisories",
+  "plugin manifests",
+];
+
+export const readinessTracks = [
+  {
+    phase: "Phase 6",
+    title: "Application preparation",
+    summary:
+      "Maintainer-facing briefs, release-readiness criteria, and a repeatable demo walkthrough make the current implementation legible for external review.",
+  },
+  {
+    phase: "Phase 7",
+    title: "Expansion scaffolding",
+    summary:
+      "CI workflows, demo report export scripts, and starter engine plans create a dependable base for fuzzing, symbolic execution, and verification work.",
+  },
+  {
+    phase: "Phase 8",
+    title: "Ecosystem foundations",
+    summary:
+      "The advisory catalog, plugin registry, and SDK-facing types establish local contracts for a broader Soroban security ecosystem.",
+  },
 ];
 
 export const contributorLanes = [
@@ -98,6 +122,15 @@ export const contributorLanes = [
     summary:
       "Vulnerable, secure, benchmark, and exploit-scenario examples create a shared ground truth for regression work, onboarding, and future performance tracking.",
   },
+];
+
+export const ecosystemFoundations = [
+  "application prep docs for demos and maintainer review",
+  "GitHub Actions workflows for CI and report export",
+  "starter plans for fuzzing, symbolic execution, and verification",
+  "advisory catalog for vulnerability intelligence",
+  "plugin registry manifests for detector and reporter extension points",
+  "SDK types that stabilize integrations before a network API exists",
 ];
 
 export const roadmap = [
@@ -125,5 +158,20 @@ export const roadmap = [
     phase: "Phase 5",
     focus:
       "Contributor readiness: issue templates, review standards, richer fixtures, and extension guides for detector, reporter, and analyzer work.",
+  },
+  {
+    phase: "Phase 6",
+    focus:
+      "Application preparation: maintainership-facing demo materials, release-readiness criteria, and repo polish for external review.",
+  },
+  {
+    phase: "Phase 7",
+    focus:
+      "Post-application expansion scaffolding: CI workflows, demo artifacts, and starter plans for fuzzing, symbolic execution, and verification.",
+  },
+  {
+    phase: "Phase 8",
+    focus:
+      "Security ecosystem scaling foundations: plugin registry, vulnerability intelligence catalog, and SDK-facing integration contracts.",
   },
 ];

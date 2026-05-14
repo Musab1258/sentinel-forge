@@ -79,6 +79,18 @@ Run static analyzer tests only:
 cargo test -p static-analyzer
 ```
 
+Run the CI-equivalent local checks:
+
+```bash
+bash scripts/ci/run-checks.sh
+```
+
+Export demo reports:
+
+```bash
+bash scripts/ci/export-demo-reports.sh
+```
+
 ## Working rules
 
 - keep docs close to architecture changes

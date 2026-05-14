@@ -30,10 +30,11 @@ The repository currently includes working project foundations and a documented a
 - `engines/static-analyzer`: Rust-based Soroban analyzer with a real CLI, detector registry, and structured reporting
 - `engines/fuzzer`, `engines/symbolic-executor`, `engines/verification-engine`: staged engine crates
 - `extensions/vscode`: inline diagnostics scaffold for editor-native workflow integration
+- `plugins/`: local plugin registry foundation for future third-party detector and reporter support
 - `docs/`: architecture, security, research, and contributor guides
 - `examples/`: space for vulnerable and secure contract fixtures
 
-Phase 5 turns that analyzer and tooling foundation into a contributor-ready repository. The engine still parses Rust source with `syn`, builds a normalized IR, and runs built-in detectors, while the repo now adds stronger onboarding docs, issue and PR templates, richer fixture organization, and clearer extension paths for detector, reporter, and analyzer work.
+Phases 6 through 8 now add the next local layer on top of that contributor-ready foundation: maintainership-facing demo materials, CI workflow scaffolding, starter plans for future engines, a vulnerability intelligence catalog, and a local plugin registry surface for long-term ecosystem scaling.
 
 ## Capability map
 
@@ -47,6 +48,9 @@ Phase 5 turns that analyzer and tooling foundation into a contributor-ready repo
 | Exploit visualization | Phase 4 | Attack path graph, replay timeline, and state transition prototype |
 | VSCode integration scaffold | Phase 4 | CLI-backed diagnostics and hover-based remediation hints |
 | Contributor infrastructure | Phase 5 | Issue templates, PR workflow, extension guides, and organized example suites |
+| Application-prep materials | Phase 6 | Maintainer brief, demo walkthrough, and release-readiness checklist |
+| CI and integration scaffolding | Phase 7 | GitHub workflow files, CI scripts, and starter deeper-engine plans |
+| Ecosystem scaling foundations | Phase 8 | Vulnerability intelligence catalog, plugin registry, and SDK shapes |
 | Fuzzing | Planned | Architecture and contributor guidance drafted |
 | Symbolic execution | Planned | Path exploration design documented |
 | Formal verification | Planned | Verification engine reserved in workspace |
@@ -189,11 +193,13 @@ See [docs/guides/local-development.md](docs/guides/local-development.md) for a f
 
 - [Architecture overview](docs/architecture/overview.md)
 - [Threat model](docs/security/threat-model.md)
+- [Application preparation](docs/application/README.md)
 - [Detector guide](docs/guides/writing-detectors.md)
 - [Analyzer guide](docs/guides/adding-analyzers.md)
 - [Reporter guide](docs/guides/creating-reporters.md)
 - [Engine extension guide](docs/guides/extending-engines.md)
 - [Testing guide](docs/guides/testing-guide.md)
+- [Vulnerability intelligence](docs/intelligence/README.md)
 - [Phase 0 research summary](docs/research/phase-0-summary.md)
 - [Contributor roadmap](docs/contributing/roadmap.md)
 - [Issue taxonomy](docs/contributing/issue-taxonomy.md)
@@ -209,6 +215,9 @@ The project is organized in phases:
 - Phase 3: credible static analyzer MVP with built-in detectors and structured reporting
 - Phase 4: visualization and tooling with dashboard, exploit-lab, HTML reporting, and IDE scaffolding
 - Phase 5: contributor readiness with issue templates, extension guides, review standards, and benchmark or exploit fixtures
+- Phase 6: application preparation with demo walkthroughs, maintainership-facing materials, and repo-polish assets
+- Phase 7: post-application expansion scaffolding for deeper engines, CI, and richer integration surfaces
+- Phase 8: ecosystem scaling foundations with a plugin registry, advisory catalog, and SDK-facing contracts
 
 See [ROADMAP.md](ROADMAP.md) for the full phase breakdown.
 

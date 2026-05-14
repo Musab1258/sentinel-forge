@@ -54,11 +54,20 @@ Application preparation:
 - public demos
 - polished documentation
 - maintainership-facing maturity improvements
+- release-readiness and demo walkthrough materials
 
 ## Phase 7
 
-Post-application expansion into deeper execution systems, richer reporting, and integration surfaces.
+Post-application expansion into deeper execution systems, richer reporting, and integration surfaces:
+
+- starter fuzzing, symbolic, and verification planning surfaces
+- CI and regression workflow scaffolding
+- analyzer artifact export paths for demos and automation
 
 ## Phase 8
 
-Security ecosystem scaling across research, automation, collaboration, and sustained Soroban coverage.
+Security ecosystem scaling across research, automation, collaboration, and sustained Soroban coverage:
+
+- local plugin registry foundation
+- vulnerability intelligence catalog
+- SDK-facing types for future integrations

@@ -1,0 +1,10 @@
+{
+  "id": "builtin.sarif-reporter",
+  "name": "SARIF Reporter",
+  "kind": "reporter",
+  "version": "0.1.0",
+  "description": "Transforms structured findings into SARIF for CI and code-scanning workflows.",
+  "entrypoint": "engines/static-analyzer/src/reporting/mod.rs",
+  "capabilities": ["sarif", "ci", "automation"],
+  "maturity": "phase-4"
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "SF-001",
+    "title": "Missing authorization check",
+    "severity": "critical",
+    "category": "authorization",
+    "detectors": ["missing-authorization"],
+    "fixture": "examples/vulnerable-contracts/missing_authorization.rs",
+    "advisory": "docs/intelligence/advisories/SF-001-missing-authorization.md"
+  },
+  {
+    "id": "SF-006",
+    "title": "Privilege escalation risk",
+    "severity": "critical",
+    "category": "privilege-escalation",
+    "detectors": ["privilege-escalation"],
+    "fixture": "examples/vulnerable-contracts/privilege-escalation/unsafe_admin_rotation.rs",
+    "advisory": "docs/intelligence/advisories/SF-006-privilege-escalation.md"
+  }
+]
