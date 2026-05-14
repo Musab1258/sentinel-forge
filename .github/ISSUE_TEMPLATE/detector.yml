@@ -1,0 +1,54 @@
+name: Detector request
+description: Propose a new vulnerability detector or a detector improvement.
+title: "[detector] "
+labels:
+  - detector
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: Describe the detector or detector improvement.
+      placeholder: Add detector for unsafe delegated authorization.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Explain the Soroban security relevance and architectural fit.
+      placeholder: This expands authorization coverage around delegated execution assumptions.
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements
+      description: List the implementation expectations.
+      placeholder: |
+        - analyze require_auth patterns
+        - detect delegated execution assumptions
+        - emit remediation guidance
+        - add regression tests
+    validations:
+      required: true
+  - type: textarea
+    id: approach
+    attributes:
+      label: Suggested approach
+      description: Reference likely detector modules, IR requirements, or helper functions.
+      placeholder: Extend the authorization detector family and reuse base_finding evidence helpers.
+  - type: textarea
+    id: testing
+    attributes:
+      label: Testing requirements
+      description: Describe the positive, negative, and edge-case coverage expected.
+      placeholder: Add one vulnerable fixture, one secure fixture, and one noisy edge case.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Link relevant docs, files, or research notes.
+      placeholder: docs/guides/writing-detectors.md, docs/architecture/plugin-system.md

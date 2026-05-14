@@ -1,0 +1,40 @@
+name: Documentation or onboarding task
+description: Improve docs, examples, setup guidance, or contributor onboarding.
+title: "[docs] "
+labels:
+  - docs
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: Describe the documentation gap or onboarding improvement.
+      placeholder: Expand the local development guide with a contributor-first workflow.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Explain which contributors are blocked or confused today.
+      placeholder: New detector contributors have to infer fixture layout and review expectations from several files.
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements
+      description: List what the new docs should cover.
+      placeholder: |
+        - setup or architecture context
+        - implementation references
+        - testing expectations
+        - linked follow-up docs
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Link the current docs or code surfaces that need alignment.
+      placeholder: README.md, CONTRIBUTING.md, docs/guides/local-development.md

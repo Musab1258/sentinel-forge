@@ -15,6 +15,14 @@ corepack pnpm install
 cargo build
 ```
 
+## Recommended onboarding sequence
+
+1. Read `README.md` and `docs/architecture/overview.md`.
+2. Read the guide that matches your intended change:
+   `writing-detectors.md`, `adding-analyzers.md`, `creating-reporters.md`, or `extending-engines.md`.
+3. Run the smallest relevant test loop before making changes.
+4. Keep docs, fixtures, and implementation aligned in the same branch.
+
 ## Common tasks
 
 Run the landing page:
@@ -59,9 +67,22 @@ Export an HTML report:
 cargo run -p static-analyzer --bin sentinel-forge -- scan examples/vulnerable-contracts --format html --output reports/vulnerabilities.html
 ```
 
+Run the landing page tests:
+
+```bash
+corepack pnpm --filter @sentinel-forge/landing test
+```
+
+Run static analyzer tests only:
+
+```bash
+cargo test -p static-analyzer
+```
+
 ## Working rules
 
 - keep docs close to architecture changes
 - prefer deterministic fixtures
 - treat external contract inputs as hostile
 - do not describe unsupported coverage as if it already exists
+- keep secure and vulnerable fixture pairs easy to compare

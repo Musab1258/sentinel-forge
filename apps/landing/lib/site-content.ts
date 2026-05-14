@@ -2,13 +2,14 @@ export const navigation = [
   { label: "Modules", href: "#modules" },
   { label: "Architecture", href: "#architecture" },
   { label: "Tooling", href: "#tooling" },
+  { label: "Contribute", href: "#contribute" },
   { label: "Roadmap", href: "#roadmap" },
 ];
 
 export const metrics = [
   { label: "Report formats", value: "04" },
   { label: "Frontend surfaces", value: "03" },
-  { label: "Workflow bridge", value: "CLI + IDE" },
+  { label: "Contributor rails", value: "Docs + templates" },
 ];
 
 export const modules = [
@@ -75,27 +76,54 @@ export const cliSteps = [
 ];
 
 export const researchTracks = [
-  "dashboard triage",
-  "exploit replay",
-  "HTML reporting",
+  "detector authoring",
+  "reporting adapters",
+  "benchmark fixtures",
   "VSCode diagnostics",
+];
+
+export const contributorLanes = [
+  {
+    name: "Detector and engine work",
+    summary:
+      "Clear detector authoring, analyzer extension, and engine hardening guides reduce the amount of reverse engineering new contributors need to do before shipping useful security logic.",
+  },
+  {
+    name: "Issue and review workflow",
+    summary:
+      "Repository-side issue templates, label guidance, and a pull request checklist keep new work scoped, testable, and easier to review for security impact.",
+  },
+  {
+    name: "Fixture and benchmark suites",
+    summary:
+      "Vulnerable, secure, benchmark, and exploit-scenario examples create a shared ground truth for regression work, onboarding, and future performance tracking.",
+  },
 ];
 
 export const roadmap = [
   {
     phase: "Phase 1",
-    focus: "Branding, monorepo infrastructure, landing page, analyzer skeleton, and contributor surface.",
+    focus:
+      "Branding, monorepo infrastructure, landing page, analyzer skeleton, and contributor surface.",
   },
   {
     phase: "Phase 2",
-    focus: "Architecture documentation, plugin standards, README maturity, and threat-model depth.",
+    focus:
+      "Architecture documentation, plugin standards, README maturity, and threat-model depth.",
   },
   {
     phase: "Phase 3",
-    focus: "A credible static analyzer MVP with detector rules, text or JSON or SARIF reporting, and regression coverage.",
+    focus:
+      "A credible static analyzer MVP with detector rules, text or JSON or SARIF reporting, and regression coverage.",
   },
   {
     phase: "Phase 4",
-    focus: "Visualization and tooling: dashboard triage, exploit-lab storytelling, HTML reports, and IDE workflow scaffolding.",
+    focus:
+      "Visualization and tooling: dashboard triage, exploit-lab storytelling, HTML reports, and IDE workflow scaffolding.",
+  },
+  {
+    phase: "Phase 5",
+    focus:
+      "Contributor readiness: issue templates, review standards, richer fixtures, and extension guides for detector, reporter, and analyzer work.",
   },
 ];

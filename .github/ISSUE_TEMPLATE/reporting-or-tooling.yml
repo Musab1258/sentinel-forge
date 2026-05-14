@@ -1,0 +1,46 @@
+name: Reporting or tooling task
+description: Propose work on reporting, frontend tooling, editor integration, or workflow UX.
+title: "[tooling] "
+labels:
+  - frontend
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: Describe the reporting or tooling task.
+      placeholder: Add a richer HTML finding summary or improve the dashboard filtering flow.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Explain who consumes this output and why it matters.
+      placeholder: This output is consumed in CI triage and the dashboard scan history view.
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements
+      description: List the concrete expectations.
+      placeholder: |
+        - preserve severity and confidence
+        - keep evidence visible
+        - avoid changing the shared finding schema unless justified
+        - add tests or snapshots
+    validations:
+      required: true
+  - type: textarea
+    id: approach
+    attributes:
+      label: Suggested approach
+      description: Point to shared types, output layers, or UI surfaces that should be reused.
+      placeholder: Start from packages/shared/src/analysis.ts and existing reporting renderers.
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Link supporting docs or files.
+      placeholder: docs/guides/creating-reporters.md, apps/dashboard, apps/exploit-lab

@@ -33,7 +33,7 @@ The repository currently includes working project foundations and a documented a
 - `docs/`: architecture, security, research, and contributor guides
 - `examples/`: space for vulnerable and secure contract fixtures
 
-Phase 4 turns that analyzer foundation into a visible tooling layer. The engine still parses Rust source with `syn`, builds a normalized IR, and runs built-in detectors, but it now also exports HTML reports and feeds shared finding models used by the dashboard, exploit-lab, and VSCode scaffold.
+Phase 5 turns that analyzer and tooling foundation into a contributor-ready repository. The engine still parses Rust source with `syn`, builds a normalized IR, and runs built-in detectors, while the repo now adds stronger onboarding docs, issue and PR templates, richer fixture organization, and clearer extension paths for detector, reporter, and analyzer work.
 
 ## Capability map
 
@@ -46,6 +46,7 @@ Phase 4 turns that analyzer foundation into a visible tooling layer. The engine 
 | Dashboard | Phase 4 | Findings table, severity views, scan history, and trace-linked code context |
 | Exploit visualization | Phase 4 | Attack path graph, replay timeline, and state transition prototype |
 | VSCode integration scaffold | Phase 4 | CLI-backed diagnostics and hover-based remediation hints |
+| Contributor infrastructure | Phase 5 | Issue templates, PR workflow, extension guides, and organized example suites |
 | Fuzzing | Planned | Architecture and contributor guidance drafted |
 | Symbolic execution | Planned | Path exploration design documented |
 | Formal verification | Planned | Verification engine reserved in workspace |
@@ -189,9 +190,14 @@ See [docs/guides/local-development.md](docs/guides/local-development.md) for a f
 - [Architecture overview](docs/architecture/overview.md)
 - [Threat model](docs/security/threat-model.md)
 - [Detector guide](docs/guides/writing-detectors.md)
+- [Analyzer guide](docs/guides/adding-analyzers.md)
 - [Reporter guide](docs/guides/creating-reporters.md)
+- [Engine extension guide](docs/guides/extending-engines.md)
+- [Testing guide](docs/guides/testing-guide.md)
 - [Phase 0 research summary](docs/research/phase-0-summary.md)
 - [Contributor roadmap](docs/contributing/roadmap.md)
+- [Issue taxonomy](docs/contributing/issue-taxonomy.md)
+- [Review process](docs/contributing/review-process.md)
 
 ## Roadmap
 
@@ -202,6 +208,7 @@ The project is organized in phases:
 - Phase 2: documentation, architecture, threat modeling, and contributor guidance
 - Phase 3: credible static analyzer MVP with built-in detectors and structured reporting
 - Phase 4: visualization and tooling with dashboard, exploit-lab, HTML reporting, and IDE scaffolding
+- Phase 5: contributor readiness with issue templates, extension guides, review standards, and benchmark or exploit fixtures
 
 See [ROADMAP.md](ROADMAP.md) for the full phase breakdown.
 

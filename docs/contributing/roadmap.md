@@ -4,19 +4,19 @@ This document highlights the next contributor-facing milestones inside the broad
 
 ## Current phase
 
-Phase 2 focuses on:
+Phase 5 focuses on:
 
-- architecture documentation
-- plugin and reporting standards
-- threat modeling and disclosure policy
-- contributor onboarding guides
+- issue and pull request structure that scales with open-source growth
+- deeper detector, analyzer, reporter, and engine extension guides
+- richer fixtures for regression, benchmark, and exploit-oriented work
+- onboarding and review systems that reduce contributor guesswork
 
 ## Next implementation targets
 
-- turn the static analyzer bootstrap into a real scan pipeline
-- add detector fixtures for authorization, storage, arithmetic, and denial-of-service cases
-- define a stable finding schema for CLI, JSON, and SARIF outputs
-- start the dashboard and exploit-lab data contracts
+- broaden static-analysis coverage without degrading evidence quality
+- add benchmark corpora for performance-sensitive engine changes
+- introduce issue templates for detector, research, docs, and tooling work
+- keep the public landing page and docs aligned with contributor reality
 
 ## Contribution lanes
 
@@ -24,3 +24,5 @@ Phase 2 focuses on:
 - `detector`: static-analysis rule work and regression fixtures
 - `verification`: symbolic execution and formal methods design
 - `frontend`: landing page, dashboard, and documentation presentation
+- `reporting`: output formats, evidence presentation, and workflow exports
+- `testing`: regression, benchmark, and hostile-input fixture work

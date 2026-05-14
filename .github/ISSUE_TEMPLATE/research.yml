@@ -1,0 +1,40 @@
+name: Research task
+description: Track exploratory security work that informs future engines or detector coverage.
+title: "[research] "
+labels:
+  - research
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: Describe the research question.
+      placeholder: Investigate WASM instrumentation strategies for Soroban symbolic execution.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Explain the architectural or security relevance.
+      placeholder: This informs future symbolic execution and hostile-input modeling.
+    validations:
+      required: true
+  - type: textarea
+    id: outputs
+    attributes:
+      label: Expected outputs
+      description: Describe the artifact expected from the research.
+      placeholder: |
+        - summarized findings
+        - implementation constraints
+        - recommended next experiments
+        - references to relevant docs
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Link related docs, papers, or repository files.
+      placeholder: docs/research/, docs/architecture/, docs/security/threat-model.md

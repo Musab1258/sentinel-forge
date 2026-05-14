@@ -41,10 +41,11 @@ Visualization and tooling:
 
 Contributor readiness:
 
-- stronger fixtures
-- detector authoring ergonomics
-- architecture hardening
-- issue taxonomy and onboarding depth
+- repository-side issue and pull request templates
+- stronger vulnerable, secure, benchmark, and exploit fixtures
+- detector, analyzer, reporter, and engine extension guides
+- contributor workflow, review standards, and testing expectations
+- issue taxonomy, label guidance, and project-board planning
 
 ## Phase 6
 

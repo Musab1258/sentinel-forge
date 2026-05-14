@@ -36,6 +36,21 @@ Reporters consume structured findings and translate them for specific consumers:
 - deterministic tests
 - documented blind spots
 
+## Contributor extension paths
+
+Phase 5 formalizes three contributor lanes around this model:
+
+- detector contributors extend `engines/static-analyzer/src/detectors` and register new rules through the detector registry
+- reporter contributors build on the shared finding model and output renderers without re-running analysis
+- future analyzer contributors add new engines without coupling ingest, finding storage, and presentation concerns
+
+The matching implementation guides are:
+
+- [Writing detectors](../guides/writing-detectors.md)
+- [Adding analyzers](../guides/adding-analyzers.md)
+- [Creating reporters](../guides/creating-reporters.md)
+- [Extending engines](../guides/extending-engines.md)
+
 ## Current interface shape
 
 Phase 3 introduces a formal detector trait and registry in the static analyzer crate. The current implementation ships built-in detectors for:
